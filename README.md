@@ -1,4 +1,4 @@
-# Full Online Cinema — Frontend
+# Full Online Cinema - Frontend
 
 > **[Читать на русском](README.ru.md)**
 
@@ -98,7 +98,7 @@ A full-featured online cinema web application built with **Next.js 13**, **React
 |---|---|---|
 | React Hook Form | 7.43.9 | Form state and validation |
 | React Select | 5.7.3 | Genre/actor multi-select dropdowns |
-| Draft.js + React Draft WYSIWYG | — | Rich text editor in admin panel |
+| Draft.js + React Draft WYSIWYG | - | Rich text editor in admin panel |
 | React Star Rating Component | 1.4.1 | Movie star rating UI |
 
 ### Dev Tools
@@ -191,7 +191,7 @@ src/
 
 ### JWT Authentication with Auto-Refresh
 
-The Axios instance (`src/api/config.ts`) attaches the access token to every request via a request interceptor. The response interceptor catches `401` errors — specifically "jwt expired" and "jwt must be provided" — and automatically calls the refresh token endpoint, then retries the original request. If refresh fails, tokens are cleared from cookies and the user is logged out.
+The Axios instance (`src/api/config.ts`) attaches the access token to every request via a request interceptor. The response interceptor catches `401` errors - specifically "jwt expired" and "jwt must be provided" - and automatically calls the refresh token endpoint, then retries the original request. If refresh fails, tokens are cleared from cookies and the user is logged out.
 
 ```
 Request  →  [attach access token]  →  API
@@ -204,7 +204,7 @@ Response ←  [401 jwt expired?]     ←  API
 
 ### Role-Based Access Control
 
-Every Next.js page can export an `isOnlyAdmin` or `isOnlyUser` flag. `AuthProvider` reads these flags, checks the Redux user state, and redirects accordingly — no page-level boilerplate needed.
+Every Next.js page can export an `isOnlyAdmin` or `isOnlyUser` flag. `AuthProvider` reads these flags, checks the Redux user state, and redirects accordingly - no page-level boilerplate needed.
 
 ### Static Generation for Home Page
 
@@ -299,7 +299,7 @@ Next.js rewrites in `next.config.js` proxy `/api/*` and `/uploads/*` to the back
 ### Public
 | Route | Page |
 |---|---|
-| `/` | Home — trending movies, top actors |
+| `/` | Home - trending movies, top actors |
 | `/auth` | Login / Registration |
 | `/genres` | All genres |
 | `/genre/[slug]` | Movies filtered by genre |
@@ -331,6 +331,6 @@ Next.js rewrites in `next.config.js` proxy `/api/*` and `/uploads/*` to the back
 
 ## Contact
 
-**Oleg Melekh** — Frontend Developer  
+**Oleg Melekh** - Frontend Developer  
 Email: oleg.melekh.frontend@gmail.com  
 GitHub: [oltree](https://github.com/oltree)
